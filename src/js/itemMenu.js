@@ -1,11 +1,7 @@
-//Grab the inline template
-var template = document.getElementById('template').innerHTML;
-
-//Compile the template
-var compiled_template = Handlebars.compile(template);
+var template = Handlebars.templates['itemMenu'];
 
 //Render the data into the template
-var rendered = compiled_template({name: "Luke", power: "force"});
+var rendered = template({name: "Luke", power: "force"});
 
 //Overwrite the contents of #target with the renderer HTML
-document.getElementById('target').innerHTML = rendered;
+document.getElementById('itemMenu').innerHTML = rendered;
