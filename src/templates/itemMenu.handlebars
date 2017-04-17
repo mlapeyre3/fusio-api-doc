@@ -1,1 +1,6 @@
-<p>Use the <strong>{{power}}</strong>, {{name}}!</p>
+ {{#each item}}
+     <div class="item">
+         {{name}}
+         {{> requestMenu }}
+     </div>
+ {{/each}}

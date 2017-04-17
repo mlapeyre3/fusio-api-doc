@@ -4,7 +4,8 @@
   "description": "The API documentation of the FUSIO platform.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "template": "./node_modules/handlebars/bin/handlebars src/templates/*.handlebars -f compiled.js"
   },
   "repository": {
     "type": "git",
