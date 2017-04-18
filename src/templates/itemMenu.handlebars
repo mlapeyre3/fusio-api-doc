@@ -1,6 +1,11 @@
  {{#each item}}
-     <div class="item">
-         {{name}}
-         {{> requestMenu }}
-     </div>
+
+         <div class="title">
+             <i class="dropdown icon"></i>
+             <b>{{name}}</b>
+         </div>
+         <div class="content menu">
+             {{> requestMenu }}
+         </div>
+
  {{/each}}

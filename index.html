@@ -4,25 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Fusio API Doc</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
     <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="/node_modules/handlebars.filter/handlebars.filter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
 </head>
 
 <body>
 <div class="ui fluid container">
     <div class="top-bar">
-
+        <img src="http://www.s4m.io.s3-eu-west-1.amazonaws.com/s4m.io/web/wp-content/uploads/2016/05/18143325/s4m_logo_light.png"
+             style="height: 100%;">
     </div>
-    <div class="main">
-        <div class="ui vertical accordion text menu" id="itemMenu"></div>
-        <div class="content"></div>
+    <div class="ui two column fluid grid">
+        <div class="two wide column">
+            <div class="ui vertical accordion text menu" id="itemMenu"></div>
+        </div>
+        <div class="fourteen wide column">
+            <div class="ui two column padded grid" id="docBody">
+                <div class="column">
+                    <div id="docIntroduction"></div>
+                </div>
+                <div class="column">
+                    <p></p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <!-- RENDER TEMPLATE AFTER EVERYTHING ELSE LOADED -->
 <script src="compiled.js"></script>
 <script src="src/js/itemMenu.js"></script>
+<script src="src/js/docIntro.js"></script>
+<script src="main.js"></script>
 </body>
 
 </html>
+
+<style>
+    .top-bar {
+        height: 50px;
+        border-bottom: 1px solid #ececec;
+    }
+
+    #itemMenu {
+        background-color: #f8f8f8;
+    }
+</style>
