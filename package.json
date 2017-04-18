@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "template": "./node_modules/handlebars/bin/handlebars src/templates/*.handlebars -f compiled.js"
+    "build": "./node_modules/handlebars/bin/handlebars src/templates/*.handlebars -f src/templates/compiled.js && ./node_modules/webpack/bin/webpack.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,12 @@
   "dependencies": {
     "handlebars": "^4.0.6",
     "handlebars.filter": "^1.0.1",
-    "helper-markdown": "^0.2.1"
+    "helper-markdown": "^0.2.1",
+    "highlightjs": "^9.10.0",
+    "markdown-it": "^8.3.1",
+    "marky-markdown": "^9.0.3"
+  },
+  "devDependencies": {
+    "webpack": "^2.4.1"
   }
 }
