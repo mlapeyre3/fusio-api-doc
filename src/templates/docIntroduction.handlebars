@@ -1,3 +1,5 @@
 <h1>{{info.name}}</h1>
 <p>{{info.description}}</p>
-<p>{{filter info.description "markdown"}}</p>
+{{#markdown}}
+<p>{{info.description}}</p>
+{{/markdown}}

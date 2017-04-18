@@ -1,15 +1,22 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['docIntroduction'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+templates['docIntroduction'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1;
 
-  return "<h1>"
+  return "<p>"
+    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.info : depth0)) != null ? stack1.description : stack1), depth0))
+    + "</p>\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, options, alias1=container.lambda, alias2=container.escapeExpression, buffer = 
+  "<h1>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.info : depth0)) != null ? stack1.name : stack1), depth0))
     + "</h1>\n<p>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.info : depth0)) != null ? stack1.description : stack1), depth0))
-    + "</p>\n<p>"
-    + alias2((helpers.filter || (depth0 && depth0.filter) || helpers.helperMissing).call(depth0 != null ? depth0 : {},((stack1 = (depth0 != null ? depth0.info : depth0)) != null ? stack1.description : stack1),"markdown",{"name":"filter","hash":{},"data":data}))
-    + "</p>";
+    + "</p>\n";
+  stack1 = ((helper = (helper = helpers.markdown || (depth0 != null ? depth0.markdown : depth0)) != null ? helper : helpers.helperMissing),(options={"name":"markdown","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data}),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},options) : helper));
+  if (!helpers.markdown) { stack1 = helpers.blockHelperMissing.call(depth0,stack1,options)}
+  if (stack1 != null) { buffer += stack1; }
+  return buffer;
 },"useData":true});
 templates['itemMenu'] = template({"1":function(container,depth0,helpers,partials,data) {
     var stack1, helper;

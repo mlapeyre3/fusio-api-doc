@@ -1,10 +1,8 @@
 var tpl_docIntro = Handlebars.templates['docIntroduction'];
 Handlebars.partials = Handlebars.templates;
 
-var Filter = require("handlebars.filter");
-
-//var data = {name: "Luke", power: "force"};
-Filter.registerHelper(Handlebars);
+var markdown = require('helper-markdown');
+Handlebars.registerHelper('markdown', markdown());
 
 $.getJSON("http://127.0.0.1:8080/src/assets/FusioAPI_Doc.postman_collection.json", function(data) {
   //Render the data into the template
